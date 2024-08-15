@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home.jsx";
+import "./App.css";
+import { initVh } from "../src/utils/setVh";
+import React, { useEffect } from "react";
+import QR from "./pages/QR/QR.jsx";
 function App() {
+  useEffect(() => {
+    const cleanup = initVh(); //initVh() cleanup에 대입
+    return cleanup;
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <QR />
+
+      <div className="phone_size">
+        <Routes>
+          <Route path="/" exact={true} element={<Home />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
