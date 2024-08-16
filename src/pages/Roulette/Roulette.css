@@ -1,0 +1,90 @@
+.roulette-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.roulette-wheel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 10px solid #333;
+  overflow: hidden;
+  transition: transform 4s ease-out;
+  background-color: #e74c3c;
+}
+
+.roulette-wheel .segment {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+}
+
+.segment-1 {
+  background-color: #3498db;
+}
+.segment-2 {
+  background-color: #9b59b6;
+}
+.segment-3 {
+  background-color: #2ecc71;
+}
+.segment-4 {
+  background-color: #f39c12;
+}
+.segment-5 {
+  background-color: #e74c3c;
+}
+.segment-6 {
+  background-color: #1abc9c;
+}
+.segment-7 {
+  background-color: #e67e22;
+}
+.segment-8 {
+  background-color: #2c3e50;
+}
+
+.roulette-pointer {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid #333;
+  z-index: 2;
+}
+
+.spin-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.spin-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
