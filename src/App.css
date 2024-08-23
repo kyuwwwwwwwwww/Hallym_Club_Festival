@@ -1,7 +1,6 @@
 .phone_size {
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
-  background-color: #db3f1e;
 }
 
 @media only screen and (max-width: 768px) {
