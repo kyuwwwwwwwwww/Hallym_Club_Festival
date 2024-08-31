@@ -1,66 +1,71 @@
 import React from "react";
+import Backgroud from "../../components/Background/Background";
 import "./Host.css";
-import Treasure from "../../assets/images/treasure.png";
+import treasure from "../../assets/images/treasure.png";
 import Lost from "../../assets/images/Lost.png";
 import Info from "../../assets/images/Info.png";
-import Background from "../../components/Background/Background";
-import Arrow from "../../assets/images/Arrow.png";
+import { Link } from "react-router-dom";
 const Host = () => {
   return (
-    <>
-      <Background />
-      <div className="Host_containor">
-        <div className="Host_header">
-          <h1>관리자 모드</h1>
-          <p>한림대학교 동아리 페스티벌 관리자 페이지입니다.</p>
-          <p>아래의 리스트를 통해 게시물 관리를 해보세요.</p>
-        </div>
+    <div>
+      <Backgroud />
+      <div className="Host_wrapper">
+        <div className="Host_header">관리자 모드</div>
 
-        <div className="Host_menu">
-          <div className="treasure">
-            <div className="left">
-              <img
-                className="treasure_img"
-                src={Treasure}
-                alt="보물찾기 이미지"
-              />
-              보물찾기
+        <div className="Host_middle">
+          <div className="mid-all">
+            <div className="mid1">
+              <div className="mid-left">
+                {" "}
+                <img className="tr" src={treasure} alt="보물상자" />
+                보물 찾기
+              </div>
+              <div className="mid-right">
+                <div className="right-left">
+                  <span>{0}</span>
+                  <span>/</span>
+                  <span>{8}</span>
+                </div>
+                <Link to="/fotune" className="right-right">
+                  <span className="row">&gt;</span>
+                </Link>
+              </div>
             </div>
-            <div className="right">
-              <span>{0}</span>
-              <span>/</span>
-              <span className="Host_right">
-                {8}
-                <img className="Arrow" src={Arrow} alt="오른쪽 꺽쇄" />
-              </span>
+            <div className="mid1">
+              <div className="mid-left">
+                {" "}
+                <img className="lost" src={Lost} alt="분실물" />
+                분실물
+              </div>
+              <div className="mid-right">
+                <div className="right-left">
+                  <span>{10}</span>
+                </div>
+                <Link to="/lost" className="right-right">
+                  <span className="row">&gt;</span>
+                </Link>
+              </div>
+            </div>
+            <div className="mid1">
+              <div className="mid-left">
+                {" "}
+                <img className="info" src={Info} alt="공지사항" />
+                공지사항
+              </div>
+              <div className="mid-right">
+                <div className="right-left">
+                  <span>{10}</span>
+                </div>
+                <Link to="/info" div className="right-right">
+                  <span className="span_row">&gt;</span>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="lost">
-            <div className="left">
-              <img className="Lost_img" src={Lost} alt="분실물 이미지" />
-              분실물
-            </div>
-            <div className="right">
-              <span className="Host_right">
-                10 <img className="Arrow" src={Arrow} alt="오른쪽 꺽쇄" />
-              </span>
-            </div>
-          </div>
-          <div className="Info">
-            <div className="left">
-              <img className="Info_img" src={Info} alt="안내 이미지" />
-              안내
-            </div>
-            <div className="right">
-              <span className="Host_right">
-                10 <img className="Arrow" src={Arrow} alt="오른쪽 꺽쇄" />
-              </span>
-            </div>
-          </div>
+          <input className="LogOut_button" type="submit" value="로그아웃" />
         </div>
-        <input className="LogOut_button" type="submit" value="로그아웃" />
       </div>
-    </>
+    </div>
   );
 };
 

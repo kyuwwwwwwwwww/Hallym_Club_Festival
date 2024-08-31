@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "SEBANG_Gothic_Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.lp_header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: #03132c;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  position: relative; /* absolute에서 relative로 변경 */
+  font-family: "SEBANG_Gothic_Bold";
+  margin-bottom: 5%;
+}
+
+.lp-header-left,
+.lp-header-right {
+  display: flex;
+  width: 20%;
+  height: 60px;
+  color: white;
+  font-size: 30px;
+  align-items: center;
+}
+
+.lp-header-mid {
+  display: flex;
+  width: 30%;
+  height: 30px;
+  color: white;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.LP-wrapper {
+  width: 100%;
+  height: 100vh;
+  max-width: 400px; /* 카드의 최대 너비를 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px; /* 모서리를 둥글게 */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 카드 그림자 */
+  box-sizing: border-box;
+  text-align: center; /* 가운데 정렬 */
+}
+
+.LP-wrapper h2 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+  text-align: left; /* 제목은 왼쪽 정렬 */
+  font-family: "SEBANG_Gothic_Bold";
+}
+
+.LP-wrapper input[type="text"] {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid gray;
+  box-sizing: border-box;
+  text-align: left; /* 텍스트는 왼쪽 정렬 */
+  font-family: "SEBANG_Gothic_Bold";
+}
+
+.LP-wrapper input[type="file"] {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: left; /* 텍스트는 왼쪽 정렬 */
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 85%;
+  font-family: "SEBANG_Gothic_Bold";
+}
+
+.pluss-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  display: flex; /* Flexbox를 사용하여 가운데 정렬 */
+  justify-content: center; /* 가로축에서 가운데 정렬 */
+  align-items: center; /* 세로축에서 가운데 정렬 */
+  font-family: "SEBANG_Gothic_Bold";
+}
+
+.plus-button:hover {
+  background-color: #ff5252; /* 버튼 호버 효과 */
+}
